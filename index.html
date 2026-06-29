@@ -1,182 +1,481 @@
-OCEAN TREASURE
-DIVE AND TRAVEL
-￼
-OCEAN TREASURE TRAVEL
-	•	业务LAYANAN
-	•	服务JASA
-	•	目的地DESTINASI
-	•	立即咨询HUBUNGI KAMI
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ocean Treasure Dive and Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --teal: #2a9d8f; --teal2: #1a7a6e; --deep: #0b2233;
+      --navy: #0e2d44; --fog: #f2f0eb; --white: #ffffff;
+      --text: #1c2b35; --muted: #6b8a97; --border: rgba(42,157,143,0.18);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; }
 
-旅行定制专家 · SPESIALIS PERJALANAN
-每一段旅程， 都是一份珍宝 Setiap Perjalanan, Adalah Sebuah Harta
-专注于印度尼西亚全境深度旅行与中国出境游定制服务，从机票、签证到酒店、包车，一站式量身规划。
-Spesialis perjalanan mendalam di seluruh Indonesia & wisata ke China — visa, tiket, hotel, dan transportasi, semua dalam satu tempat.
-Specialists in Indonesia inbound travel & China outbound tours — visa, flights, hotels and transfers, all in one place.
-开始规划行程
-MULAI RENCANAKAN
-了解我们
-TENTANG KAMI
-🏔️
-替换为封面图片 · ADD HERO IMAGE HERE
-🌏 印度尼西亚 · 中国
-5000+
-服务旅客
-WISATAWAN
-40+
-目的地覆盖
-DESTINASI
-11+
-年行业经验
-TAHUN PENGALAMAN
-100%
-客户满意度
-KEPUASAN KLIEN
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 6vw; height: 72px;
+      background: rgba(11,34,51,0.97); backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo-link { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .logo-img { height: 42px; mix-blend-mode: screen; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+    .logo-main { font-size: 1rem; font-weight: 600; letter-spacing: 0.13em; color: #fff; font-family: 'Cormorant Garamond', serif; }
+    .logo-sub { font-size: 0.56rem; font-weight: 300; letter-spacing: 0.22em; color: rgba(255,255,255,0.42); text-transform: uppercase; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { font-size: 0.72rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.52); text-decoration: none; transition: color 0.2s; white-space: nowrap; }
+    .nav-links a:hover { color: var(--teal); }
+    .nav-cta { background: transparent !important; border: 1px solid var(--teal) !important; color: var(--teal) !important; padding: 7px 20px; border-radius: 2px; white-space: nowrap; }
+    .nav-cta:hover { background: var(--teal) !important; color: var(--deep) !important; }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: rgba(255,255,255,0.7); transition: all 0.3s; }
 
-核心业务 · BISNIS UTAMA
-两大专属服务方向
-Dua layanan utama yang dirancang untuk setiap wisatawan
-🌺
-放置印尼风景图片
-01
-INBOUND
-印度尼西亚全境自由行
-Paket Wisata Indonesia — Perjalanan Mandiri
-专为来印尼的外国游客提供一站式自由行预订服务。无论是巴厘岛、科莫多、苏拉威西还是爪哇岛，从第一天落地到最后离境，全程安排妥帖。
-Layanan pemesanan wisata mandiri untuk turis mancanegara di seluruh Indonesia — dari Bali, Komodo, Sulawesi hingga Jawa, semua terurus dari hari pertama hingga kepulangan.
-包车接送 / Transportasi
-酒店预订 / Hotel
-景点门票 / Tiket
-导游服务 / Pemandu
-行程定制 / Itinerari
-潜水体验 / Menyelam
-🏯
-放置中国风景图片
-02
-OUTBOUND
-印尼人赴华出境游
-Wisata ke China — untuk Wisatawan Indonesia
-专为印度尼西亚游客打造的中国旅行套餐，覆盖签证办理、机票预订、酒店安排、全程包车及导游，让每一位客人轻松畅游中国。
-Paket wisata China khusus untuk wisatawan Indonesia — mencakup visa, tiket pesawat, hotel, transportasi, dan pemandu, agar perjalanan Anda ke China terasa mudah dan nyaman.
-签证代办 / Visa
-机票预订 / Tiket Pesawat
-酒店安排 / Hotel
-全程包车 / Transportasi
-中文导游 / Pemandu
-行程定制 / Itinerari
-🌅
-大图 · 建议横版风景
-科莫多岛 · Komodo
-🏛️
-图片 2
-成都
-🌴
-图片 3
-巴厘岛 · Bali
+    /* HERO */
+    .hero { position: relative; height: 100vh; min-height: 600px; overflow: hidden; background: var(--deep); }
+    .hero-slides { position: absolute; inset: 0; }
+    .hero-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.2s ease-in-out; background-size: cover; background-position: center; }
+    .hero-slide.active { opacity: 1; }
+    .slide1 { background: linear-gradient(135deg,#071929 0%,#0e3a5c 60%,#071929 100%); }
+    .slide2 { background: linear-gradient(135deg,#071929 0%,#163a28 60%,#071929 100%); }
+    .slide3 { background: linear-gradient(135deg,#111929 0%,#291a3a 60%,#111929 100%); }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(11,34,51,0.88) 45%, rgba(11,34,51,0.25)); }
+    .hero-content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 0 6vw; padding-top: 72px; max-width: 680px; }
+    .eyebrow { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+    .eyebrow-line { width: 32px; height: 1px; background: var(--teal); }
+    .eyebrow-text { font-size: 0.64rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem,5vw,4.6rem); font-weight: 300; line-height: 1.1; color: #fff; margin-bottom: 0.5rem; }
+    .hero h1 em { font-style: italic; color: var(--teal); }
+    .hero-sub { font-size: clamp(0.95rem,1.5vw,1.15rem); color: rgba(255,255,255,0.3); font-weight: 300; margin-bottom: 1.6rem; letter-spacing: 0.04em; }
+    .hero-desc { font-size: 0.88rem; line-height: 1.9; color: rgba(255,255,255,0.46); max-width: 480px; margin-bottom: 2.5rem; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--teal); color: var(--deep); padding: 14px 30px; border-radius: 2px; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: background 0.2s; white-space: nowrap; }
+    .btn-primary:hover { background: var(--teal2); }
+    .btn-outline { display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid rgba(255,255,255,0.22); color: rgba(255,255,255,0.58); padding: 14px 30px; border-radius: 2px; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: all 0.2s; white-space: nowrap; }
+    .btn-outline:hover { border-color: var(--teal); color: var(--teal); }
+    .hero-dots { position: absolute; bottom: 2.5rem; left: 6vw; z-index: 2; display: flex; gap: 0.6rem; }
+    .hero-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.22); cursor: pointer; transition: all 0.3s; border: none; padding: 0; }
+    .hero-dot.active { background: var(--teal); transform: scale(1.4); }
 
-全程服务 · LAYANAN LENGKAP
-从出发到归来， 每个细节我们来安排
-Dari keberangkatan hingga kepulangan — setiap detail, kami urus.
-无论是第一次出行的旅行新手，还是经验丰富的旅行达人，我们的服务团队都能为您量身打造最合适的方案。
-✈️
-机票预订 / Tiket Pesawat
-Pemesanan Tiket Pesawat
-国际与国内航班一站预订，协助选择最优转机方案与舱位。
-Pemesanan penerbangan internasional & domestik, termasuk rekomendasi transit dan kelas terbaik.
-📋
-签证代办 / Visa
-Layanan Pengurusan Visa
-中国签证、印尼签证全程代办，材料清单提供，成功率有保障。
-Pengurusan visa China & Indonesia, lengkap dengan daftar dokumen dan tingkat keberhasilan tinggi.
-🏨
-酒店安排 / Hotel
-Pemesanan Hotel
-精品度假村、精选酒店至经济型住宿，按预算与偏好精准匹配。
-Dari resort butik hingga penginapan ekonomis — disesuaikan dengan anggaran dan preferensi Anda.
-🚐
-包车接送 / Transportasi
-Transportasi Pribadi
-机场接送、景区包车，专属司机配合您的行程时间灵活出行。
-Jemput-antar bandara & sewa kendaraan wisata dengan pengemudi pribadi yang fleksibel.
-🗺️
-深度行程定制
-Itinerari Custom
-根据旅行天数、兴趣与预算，量身规划每日行程，拒绝走马观花。
-Rencana perjalanan harian yang disesuaikan dengan durasi, minat, dan anggaran Anda.
-🎊
-特色体验加项
-Pengalaman Spesial
-火山徒步、文化体验、美食探访、浮潜……让旅途更有深度与回忆。
-Pendakian gunung berapi, wisata budaya, kuliner lokal, snorkeling — jadikan perjalanan lebih berkesan.
+    /* STATS */
+    .stats { display: flex; background: var(--navy); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .stat { flex: 1; padding: 1.8rem 2vw; border-right: 1px solid var(--border); text-align: center; }
+    .stat:last-child { border-right: none; }
+    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.1rem; font-weight: 300; color: var(--teal); line-height: 1; }
+    .stat-label { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.32); margin-top: 5px; }
 
-为什么选择我们 · MENGAPA KAMI
-专业、贴心、 值得信赖
-	•	01 双语专业团队 Tim Profesional Dwibahasa 中文、印尼语流利沟通，跨越语言障碍，让每位客人感到宾至如归。 Komunikasi lancar dalam Bahasa Indonesia & Mandarin — tanpa hambatan bahasa.   02 深耕本地资源 Jaringan Lokal yang Kuat 深耕印尼多年，掌握大量优质本地供应商与小众目的地资源。 Bertahun-tahun di Indonesia, kami punya akses ke vendor lokal terbaik & destinasi tersembunyi.   03 一站式无忧服务 Layanan Lengkap Tanpa Ribet 签证、机票、酒店、包车全部打包，旅行者只需收拾行李，其余交给我们。 Visa, tiket, hotel, transportasi — semua diurus. Anda hanya perlu berkemas.   04 透明报价，无隐藏费用 Harga Transparan, Tanpa Biaya Tersembunyi 报价清晰明了，包含与不包含的项目逐一列明，让您安心出行。 Penawaran harga yang jelas dan rinci — apa yang termasuk & tidak termasuk, semuanya transparan.  
-"旅行的意义， 不在于走了多远， 而在于看见了什么。"
-OCEAN TREASURE TRAVEL
-📸
-放置团队或旅行风景图
+    /* SECTION */
+    .section { padding: 90px 6vw; }
+    .section-dark { background: var(--deep); }
+    .section-mid { background: var(--navy); }
+    .s-eyebrow { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 1rem; }
+    .s-eyebrow-line { width: 22px; height: 1px; background: var(--teal); }
+    .s-eyebrow-text { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); }
+    .s-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,3.5vw,3rem); font-weight: 300; color: var(--deep); line-height: 1.15; }
+    .s-title.light { color: #fff; }
+    .s-sub { font-size: 0.76rem; color: var(--muted); margin-top: 0.4rem; font-style: italic; }
+    .s-sub.light { color: rgba(255,255,255,0.32); }
 
-热门目的地 · DESTINASI POPULER
-我们带你去的珍宝之地
-Destinasi istimewa yang kami banggakan
-🌴
-巴厘岛图片
+    /* EXPLORE (2 panels) */
+    .explore-panels { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 3rem; }
+    .explore-panel { position: relative; overflow: hidden; min-height: 420px; background: var(--navy); }
+    .explore-panel img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; opacity: 0.55; transition: transform 0.6s, opacity 0.3s; display: block; }
+    .explore-panel:hover img { transform: scale(1.05); opacity: 0.7; }
+    .explore-ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg,#0a1f33,#0d2d44); }
+    .explore-ph svg { opacity: 0.12; width: 80px; height: 80px; }
+    .explore-ov { position: absolute; inset: 0; background: linear-gradient(to top, rgba(11,34,51,0.92) 0%, transparent 55%); }
+    .explore-info { position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; }
+    .explore-flag { font-size: 1.6rem; margin-bottom: 0.5rem; }
+    .explore-tag { display: inline-block; font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); border: 1px solid rgba(42,157,143,0.4); padding: 3px 10px; margin-bottom: 0.6rem; }
+    .explore-name { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; display: block; margin-bottom: 0.3rem; }
+    .explore-desc { font-size: 0.8rem; color: rgba(255,255,255,0.52); line-height: 1.65; margin-bottom: 1.2rem; }
+    .explore-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.2rem; }
+    .e-tag { font-size: 0.62rem; letter-spacing: 0.07em; border: 1px solid rgba(42,157,143,0.28); color: var(--teal); padding: 3px 10px; }
+    .explore-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); text-decoration: none; }
+    .explore-link:hover { gap: 0.7rem; }
 
-🇮🇩
-巴厘岛
-Bali
-入境游
-🦎
-科莫多图片
+    /* WHY */
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7vw; align-items: start; }
+    .why-list { list-style: none; }
+    .why-item { display: flex; gap: 1.5rem; padding: 1.5rem 0; border-bottom: 1px solid var(--border); }
+    .why-item:first-child { border-top: 1px solid var(--border); }
+    .why-num { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--teal); min-width: 20px; padding-top: 2px; }
+    .why-item h4 { font-size: 0.88rem; font-weight: 500; color: #fff; margin-bottom: 0.2rem; }
+    .why-item p { font-size: 0.78rem; color: rgba(255,255,255,0.36); line-height: 1.7; }
+    .why-right { padding-top: 1rem; }
+    .why-quote { border-left: 2px solid var(--teal); padding-left: 2rem; margin-bottom: 2rem; }
+    .why-q { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 300; font-style: italic; color: rgba(255,255,255,0.7); line-height: 1.45; margin-bottom: 0.8rem; }
+    .why-attr { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--teal); text-transform: uppercase; }
 
-🇮🇩
-科莫多岛
-Komodo
-入境游
-🐼
-成都图片
+    /* SERVICES */
+    .svc-grid { display: grid; grid-template-columns: repeat(3,1fr); border: 1px solid rgba(42,157,143,0.12); margin-top: 3rem; }
+    .svc-card { padding: 2rem 1.8rem; border-right: 1px solid rgba(42,157,143,0.12); border-bottom: 1px solid rgba(42,157,143,0.12); transition: background 0.2s; }
+    .svc-card:nth-child(3n) { border-right: none; }
+    .svc-card:nth-last-child(-n+3) { border-bottom: none; }
+    .svc-card:hover { background: rgba(42,157,143,0.04); }
+    .svc-icon { font-size: 1.4rem; margin-bottom: 1rem; }
+    .svc-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--deep); margin-bottom: 0.15rem; }
+    .svc-en { font-size: 0.62rem; color: var(--muted); letter-spacing: 0.08em; font-style: italic; margin-bottom: 0.7rem; }
+    .svc-desc { font-size: 0.78rem; line-height: 1.75; color: var(--muted); }
 
-🇨🇳
-成都
-Chengdu
-出境游
-🌉
-重庆图片
+    /* ABOUT */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7vw; align-items: center; }
+    .about-body { font-size: 0.88rem; line-height: 1.9; color: rgba(255,255,255,0.46); margin-bottom: 1.4rem; }
+    .about-detail { font-size: 0.78rem; line-height: 1.8; color: rgba(255,255,255,0.28); font-style: italic; }
+    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
+    .astat { background: #0a2030; padding: 1.5rem; text-align: center; }
+    .astat-n { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: var(--teal); line-height: 1; }
+    .astat-l { font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-top: 4px; }
 
-🇨🇳
-重庆
-Chongqing
-出境游
+    /* CONTACT */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7vw; align-items: start; }
+    .contact-desc { font-size: 0.86rem; line-height: 1.9; color: rgba(255,255,255,0.42); margin-bottom: 2rem; }
+    .cinfo { display: flex; flex-direction: column; gap: 1.2rem; }
+    .cinfo-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .c-icon { font-size: 1rem; padding-top: 1px; flex-shrink: 0; }
+    .c-label { font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 2px; }
+    .c-val { font-size: 0.82rem; color: rgba(255,255,255,0.52); }
+    .c-val a { color: rgba(255,255,255,0.52); text-decoration: none; }
+    .c-val a:hover { color: var(--teal); }
+    .cform { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
+    .cform input, .cform select, .cform textarea {
+      background: rgba(255,255,255,0.04); border: none; padding: 14px 18px;
+      font-size: 0.8rem; font-family: 'Inter',sans-serif; color: #fff;
+      outline: none; transition: background 0.2s; width: 100%;
+    }
+    .cform select option { background: var(--deep); }
+    .cform input::placeholder, .cform textarea::placeholder { color: rgba(255,255,255,0.2); }
+    .cform input:focus, .cform select:focus, .cform textarea:focus { background: rgba(42,157,143,0.07); }
+    .cform textarea { resize: vertical; min-height: 110px; }
+    .fsubmit { background: var(--teal); color: var(--deep); border: none; padding: 15px 28px; font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; font-family: 'Inter',sans-serif; font-weight: 500; cursor: pointer; transition: background 0.2s; align-self: flex-start; margin: 1px; }
+    .fsubmit:hover { background: var(--teal2); }
 
-联系我们 · HUBUNGI KAMI
-准备好出发了吗？
-告诉我们你想去的地方、出行人数和大概时间，我们将在 24 小时内为你提供专属方案与报价。
-Ceritakan tujuan, jumlah peserta, dan tanggal perjalanan Anda — kami akan mengirimkan penawaran khusus dalam 24 jam.
-📧
-EMAIL
-hello@oceantreasure.com
-💬
-微信 / WECHAT
-OceanTreasureTravel
-📱
-WHATSAPP
-+62 xxx xxxx xxxx
-📍
-总部 / KANTOR
-印度尼西亚 · 巴厘岛 / Bali, Indonesia
+    /* FOOTER */
+    footer { background: #030d16; padding: 28px 6vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid var(--border); }
+    footer p { font-size: 0.67rem; color: rgba(255,255,255,0.18); letter-spacing: 0.05em; }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { font-size: 0.65rem; color: rgba(255,255,255,0.22); text-decoration: none; }
+    .footer-links a:hover { color: var(--teal); }
 
+    /* WHATSAPP FLOAT */
+    .wa-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 300; width: 56px; height: 56px; border-radius: 50%; background: #25d366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; }
+    .wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.55); }
+    .wa-float svg { width: 28px; height: 28px; fill: white; }
 
-          咨询业务类型 / Jenis Layanan
-          印尼入境游 / Wisata Masuk Indonesia
-          中国出境游 / Wisata ke China
-          其他 / Lainnya
-        
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .explore-panels { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .svc-grid { grid-template-columns: 1fr 1fr; }
+      .svc-card:nth-child(3n) { border-right: 1px solid rgba(42,157,143,0.12); }
+      .svc-card:nth-child(2n) { border-right: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .nav-links { display: none; flex-direction: column; gap: 0; }
+      .nav-links.open { display: flex; position: absolute; top: 72px; left: 0; right: 0; background: rgba(11,34,51,0.99); padding: 1rem 5vw 1.5rem; border-bottom: 1px solid var(--border); }
+      .nav-links.open li a { padding: 0.8rem 0; display: block; border-bottom: 1px solid rgba(42,157,143,0.1); }
+      .nav-toggle { display: flex; }
+      .section { padding: 60px 5vw; }
+      .svc-grid { grid-template-columns: 1fr; }
+      .svc-card { border-right: none !important; border-bottom: 1px solid rgba(42,157,143,0.12) !important; }
+      .svc-card:last-child { border-bottom: none !important; }
+      .stats { flex-wrap: wrap; }
+      .stat { min-width: 50%; border-bottom: 1px solid var(--border); }
+      .frow { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; }
+      .btn-primary, .btn-outline { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
 
+<!-- NAV -->
+<nav id="navbar">
+  <a class="logo-link" href="#">
+    <!-- Replace src below with your actual logo path or base64 -->
+    <img class="logo-img" src="logo.png" alt="Ocean Treasure" onerror="this.style.display='none'" />
+    <span class="logo-text">
+      <span class="logo-main">OCEAN TREASURE</span>
+      <span class="logo-sub">DIVE AND TRAVEL</span>
+    </span>
+  </a>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="#explore">Explore</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <button class="nav-toggle" id="navtoggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-slides">
+    <div class="hero-slide slide1 active"></div>
+    <div class="hero-slide slide2"></div>
+    <div class="hero-slide slide3"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="eyebrow">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">Travel Specialist · Spesialis Perjalanan</span>
+    </div>
+    <h1>Every Journey,<br>a <em>Treasure</em></h1>
+    <p class="hero-sub">每一段旅程，都是一份珍宝</p>
+    <p class="hero-desc">Specialists in Indonesia inbound travel &amp; China outbound tours — visa, flights, hotels, transfers, all in one place.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Plan Your Trip</a>
+      <a href="#explore" class="btn-outline">Explore Destinations</a>
+    </div>
+  </div>
+  <div class="hero-dots" id="herodots">
+    <button class="hero-dot active" data-i="0"></button>
+    <button class="hero-dot" data-i="1"></button>
+    <button class="hero-dot" data-i="2"></button>
+  </div>
+</section>
 
-发送咨询 / KIRIM PERTANYAAN
-OCEAN TREASURE
-DIVE AND TRAVEL
-￼
-OCEAN TREASURE TRAVEL
-© 2026 Ocean Treasure Dive and Travel. Semua Hak Dilindungi.
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Happy Travelers</div></div>
+  <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Years Experience</div></div>
+  <div class="stat"><div class="stat-num">2</div><div class="stat-label">Destinations</div></div>
+  <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Support</div></div>
+</div>
+
+<!-- EXPLORE -->
+<section class="section" id="explore">
+  <div class="s-eyebrow"><span class="s-eyebrow-line"></span><span class="s-eyebrow-text">Our Specialties</span></div>
+  <h2 class="s-title">Explore With Us</h2>
+  <p class="s-sub">Two core routes — your trusted guide in both directions</p>
+
+  <div class="explore-panels">
+    <!-- Indonesia -->
+    <div class="explore-panel">
+      <div class="explore-ph">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 60 Q40 20 60 60" stroke="white" stroke-width="1.5"/><circle cx="40" cy="35" r="8" stroke="white" stroke-width="1.5"/><path d="M10 65 H70" stroke="white" stroke-width="1"/></svg>
+      </div>
+      <div class="explore-ov"></div>
+      <div class="explore-info">
+        <div class="explore-flag">🇮🇩</div>
+        <span class="explore-tag">Inbound · Indonesia</span>
+        <span class="explore-name">Explore Indonesia</span>
+        <p class="explore-desc">Discover Bali, Komodo, Raja Ampat and beyond. Full-service travel arrangements across the Indonesian archipelago.</p>
+        <div class="explore-tags">
+          <span class="e-tag">Bali</span>
+          <span class="e-tag">Komodo</span>
+          <span class="e-tag">Raja Ampat</span>
+          <span class="e-tag">Lombok</span>
+          <span class="e-tag">Diving</span>
+        </div>
+        <a href="#contact" class="explore-link">Plan Your Visit →</a>
+      </div>
+    </div>
+
+    <!-- China -->
+    <div class="explore-panel">
+      <div class="explore-ph">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 55 Q30 25 45 40 Q55 50 65 20" stroke="white" stroke-width="1.5"/><circle cx="45" cy="40" r="6" stroke="white" stroke-width="1.5"/><path d="M10 65 H70" stroke="white" stroke-width="1"/></svg>
+      </div>
+      <div class="explore-ov"></div>
+      <div class="explore-info">
+        <div class="explore-flag">🇨🇳</div>
+        <span class="explore-tag">Outbound · China</span>
+        <span class="explore-name">Explore China</span>
+        <p class="explore-desc">Discover Chengdu, Chongqing, Beijing and beyond. Visa processing, flights, hotels, private transfers &amp; guided tours.</p>
+        <div class="explore-tags">
+          <span class="e-tag">Chengdu</span>
+          <span class="e-tag">Chongqing</span>
+          <span class="e-tag">Beijing</span>
+          <span class="e-tag">Shanghai</span>
+          <span class="e-tag">Visa</span>
+        </div>
+        <a href="#contact" class="explore-link">Start Planning →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section section-dark" id="why">
+  <div class="why-grid">
+    <div>
+      <div class="s-eyebrow"><span class="s-eyebrow-line"></span><span class="s-eyebrow-text">Why Ocean Treasure</span></div>
+      <h2 class="s-title light">Your Journey,<br>Our Expertise</h2>
+      <p class="s-sub light">为什么选择我们</p>
+      <ul class="why-list" style="margin-top:2rem">
+        <li class="why-item"><span class="why-num">01</span><div><h4>Local Knowledge</h4><p>Deep connections across Indonesia and China, built over a decade of specialised travel.</p></div></li>
+        <li class="why-item"><span class="why-num">02</span><div><h4>Full Service</h4><p>Visa processing, flights, hotels, transfers and guides — handled end to end.</p></div></li>
+        <li class="why-item"><span class="why-num">03</span><div><h4>Personalised</h4><p>Every itinerary is tailored. No cookie-cutter tours.</p></div></li>
+        <li class="why-item"><span class="why-num">04</span><div><h4>24/7 Support</h4><p>We're with you before, during and after your trip.</p></div></li>
+      </ul>
+    </div>
+    <div class="why-right">
+      <div class="why-quote">
+        <p class="why-q">"The best journeys are the ones that change you."</p>
+        <span class="why-attr">Ocean Treasure · Bali, Indonesia</span>
+      </div>
+      <div class="about-stats">
+        <div class="astat"><div class="astat-n">500+</div><div class="astat-l">Travelers</div></div>
+        <div class="astat"><div class="astat-n">10+</div><div class="astat-l">Years</div></div>
+        <div class="astat"><div class="astat-n">2</div><div class="astat-l">Countries</div></div>
+        <div class="astat"><div class="astat-n">★ 5</div><div class="astat-l">Rating</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="s-eyebrow"><span class="s-eyebrow-line"></span><span class="s-eyebrow-text">What We Offer</span></div>
+  <h2 class="s-title">Our Services</h2>
+  <p class="s-sub">服务项目 · Layanan Kami</p>
+  <div class="svc-grid">
+    <div class="svc-card"><div class="svc-icon">✈️</div><div class="svc-title">Flight Booking</div><div class="svc-en">Pemesanan Tiket</div><p class="svc-desc">Best-fare domestic and international flights, tailored to your itinerary.</p></div>
+    <div class="svc-card"><div class="svc-icon">🏨</div><div class="svc-title">Hotel &amp; Villa</div><div class="svc-en">Akomodasi</div><p class="svc-desc">Curated accommodation from boutique guesthouses to luxury resorts.</p></div>
+    <div class="svc-card"><div class="svc-icon">📋</div><div class="svc-title">Visa Processing</div><div class="svc-en">Pengurusan Visa</div><p class="svc-desc">Chinese and Indonesian visas handled smoothly, from application to approval.</p></div>
+    <div class="svc-card"><div class="svc-icon">🚐</div><div class="svc-title">Private Transfer</div><div class="svc-en">Transportasi Pribadi</div><p class="svc-desc">Airport pickups, inter-city transfers and private chauffeur services.</p></div>
+    <div class="svc-card"><div class="svc-icon">🗺️</div><div class="svc-title">Guided Tours</div><div class="svc-en">Tur Terpandu</div><p class="svc-desc">Expert local guides for cultural, nature and culinary experiences.</p></div>
+    <div class="svc-card"><div class="svc-icon">🤿</div><div class="svc-title">Diving Packages</div><div class="svc-en">Paket Menyelam</div><p class="svc-desc">Diving trips across Indonesia's world-class sites — Komodo, Raja Ampat and more.</p></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section section-dark" id="about">
+  <div class="about-grid">
+    <div>
+      <div class="s-eyebrow"><span class="s-eyebrow-line"></span><span class="s-eyebrow-text">About Us</span></div>
+      <h2 class="s-title light">Ocean Treasure<br>Dive &amp; Travel</h2>
+      <p class="s-sub light">关于我们 · Tentang Kami</p>
+      <p class="about-body" style="margin-top:1.5rem">Based in Bali, Ocean Treasure Dive and Travel specialises in two complementary markets: inbound travel for visitors exploring the Indonesian archipelago, and outbound tours for Indonesian travellers discovering China.</p>
+      <p class="about-detail">We handle everything — from the first visa query to the final hotel checkout — so you can focus on the experience. Our team speaks Mandarin, Indonesian and English.</p>
+    </div>
+    <div class="about-stats">
+      <div class="astat"><div class="astat-n">🇮🇩</div><div class="astat-l">Indonesia Inbound</div></div>
+      <div class="astat"><div class="astat-n">🇨🇳</div><div class="astat-l">China Outbound</div></div>
+      <div class="astat"><div class="astat-n">Bali</div><div class="astat-l">Headquarters</div></div>
+      <div class="astat"><div class="astat-n">中·印·EN</div><div class="astat-l">Languages</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section-mid" id="contact">
+  <div class="contact-grid">
+    <div>
+      <div class="s-eyebrow"><span class="s-eyebrow-line"></span><span class="s-eyebrow-text">Get In Touch</span></div>
+      <h2 class="s-title light">Start Planning<br>Your Trip</h2>
+      <p class="s-sub light">联系我们 · Hubungi Kami</p>
+      <p class="contact-desc" style="margin-top:1.5rem">Ready to explore Indonesia or China? Drop us a message and we'll get back to you within 24 hours.</p>
+      <div class="cinfo">
+        <div class="cinfo-item">
+          <span class="c-icon">💬</span>
+          <div>
+            <div class="c-label">WhatsApp</div>
+            <div class="c-val"><a href="https://wa.me/628123855781" target="_blank">+62 812-3855-7819</a></div>
+          </div>
+        </div>
+        <div class="cinfo-item">
+          <span class="c-icon">✉️</span>
+          <div>
+            <div class="c-label">Email</div>
+            <div class="c-val"><a href="mailto:pt.oceantreasure@gmail.com">pt.oceantreasure@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="cinfo-item">
+          <span class="c-icon">📍</span>
+          <div>
+            <div class="c-label">Location</div>
+            <div class="c-val">Bali, Indonesia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <form class="cform" onsubmit="handleForm(event)">
+        <div class="frow">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Email Address" required />
+        </div>
+        <div class="frow">
+          <input type="tel" placeholder="WhatsApp Number" />
+          <select>
+            <option value="">Interested In...</option>
+            <option>Explore Indonesia</option>
+            <option>Explore China</option>
+            <option>Visa Processing</option>
+            <option>Diving Package</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <textarea placeholder="Tell us about your trip — destination, dates, number of people..."></textarea>
+        <button type="submit" class="fsubmit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 PT Ocean Treasure Dive and Travel · Bali, Indonesia</p>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#explore">Explore</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/628123855781" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 2C8.27 2 2 8.27 2 16c0 2.46.66 4.76 1.8 6.75L2 30l7.47-1.77A13.93 13.93 0 0016 30c7.73 0 14-6.27 14-14S23.73 2 16 2zm0 25.5c-2.14 0-4.14-.58-5.87-1.59l-.42-.25-4.44 1.05 1.07-4.33-.27-.44A11.5 11.5 0 014.5 16C4.5 9.6 9.6 4.5 16 4.5S27.5 9.6 27.5 16 22.4 27.5 16 27.5zm6.3-8.6c-.34-.17-2-.99-2.32-1.1-.31-.11-.54-.17-.77.17-.23.34-.89 1.1-1.09 1.33-.2.23-.4.26-.74.09-.34-.18-1.43-.53-2.72-1.68-1-.9-1.67-2-1.87-2.34-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.59.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.87-1.06-2.56-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.86s1.23 3.32 1.4 3.55c.17.23 2.42 3.7 5.87 5.19.82.36 1.46.57 1.96.73.82.26 1.57.22 2.16.13.66-.1 2-.82 2.28-1.6.28-.79.28-1.46.2-1.6-.09-.14-.31-.23-.65-.4z"/>
+  </svg>
+</a>
+
+<script>
+  // NAV TOGGLE
+  const navtoggle = document.getElementById('navtoggle');
+  const navlinks = document.getElementById('navlinks');
+  navtoggle.addEventListener('click', () => navlinks.classList.toggle('open'));
+  navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navlinks.classList.remove('open')));
+
+  // HERO CAROUSEL
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+  let cur = 0, timer;
+  function goTo(n) {
+    slides[cur].classList.remove('active');
+    dots[cur].classList.remove('active');
+    cur = (n + slides.length) % slides.length;
+    slides[cur].classList.add('active');
+    dots[cur].classList.add('active');
+  }
+  function next() { goTo(cur + 1); }
+  function start() { timer = setInterval(next, 4500); }
+  dots.forEach(d => d.addEventListener('click', () => { clearInterval(timer); goTo(+d.dataset.i); start(); }));
+  start();
+
+  // FORM HANDLER (WhatsApp redirect)
+  function handleForm(e) {
+    e.preventDefault();
+    const f = e.target;
+    const name = f.querySelector('input[type=text]').value;
+    const msg = encodeURIComponent('Hi Ocean Treasure! My name is ' + name + '. I\'d like to enquire about a trip.');
+    window.open('https://wa.me/628123855781?text=' + msg, '_blank');
+  }
+</script>
+</body>
+</html>
